@@ -4,9 +4,8 @@
 
 /**
  * Arizalarni qayerga yuborish sozlamasi.
- * endpoint — JSON qabul qiluvchi manzil (masalan, Google Apps Script,
- * Formspree yoki o'zingizning backend). Bo'sh qolsa, ariza faqat
- * brauzerda saqlanadi (sinov rejimi).
+ * endpoint — Google Apps Script Web App manzili (apps-script/README.md).
+ * Bo'sh qolsa, ariza faqat brauzerda saqlanadi (sinov rejimi).
  */
 const CONFIG = {
   endpoint: '',
@@ -162,12 +161,15 @@ const sendOrder = async (order) => {
     await new Promise((r) => setTimeout(r, 900));
     return;
   }
+  // text/plain — Apps Script CORS preflight (OPTIONS) so'rovini qo'llamaydi
   const res = await fetch(CONFIG.endpoint, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
     body: JSON.stringify(order),
   });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const result = await res.json();
+  if (!result.ok) throw new Error(result.error || 'unknown');
 };
 
 form.addEventListener('submit', async (e) => {
@@ -183,6 +185,7 @@ form.addEventListener('submit', async (e) => {
     city: data.get('city'),
     giftNote: giftField.hidden ? '' : (data.get('giftNote') || '').trim(),
     comment: (data.get('comment') || '').trim(),
+    website: data.get('website') || '',
     createdAt: new Date().toISOString(),
   };
 
