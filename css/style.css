@@ -304,6 +304,7 @@ em { font-style: italic; }
 
 .burger {
   display: none;
+  flex: 0 0 44px;
   width: 44px; height: 44px;
   background: none; border: 0;
   position: relative;
@@ -1060,6 +1061,11 @@ em { font-style: italic; }
 @media (max-width: 600px) {
   body { font-size: 14.5px; }
   .container { padding: 0 16px; }
+  /* Logo, tema tugmasi va menyu tugmasi tor ekranga sig'ishi uchun */
+  .header__inner { gap: 8px; }
+  .logo { gap: 10px; min-width: 0; }
+  .logo__mark { width: 32px; height: 32px; font-size: 19px; flex: 0 0 32px; }
+  .logo__word { font-size: 18px; letter-spacing: .24em; }
   .section { padding: 80px 0; }
   .section__head { margin-bottom: 50px; }
   .hero__facts { gap: 26px; }
