@@ -15,6 +15,42 @@ const CONFIG = {
 
 document.documentElement.classList.remove('no-js');
 
+/* ---------- Theme toggle (yorug' / qorong'u) ---------- */
+const THEME_KEY = 'valmond-theme';
+const themeToggle = document.getElementById('themeToggle');
+const themeMeta = document.querySelector('meta[name="theme-color"]');
+const systemDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+const readStoredTheme = () => {
+  try { return localStorage.getItem(THEME_KEY); } catch (_) { return null; }
+};
+
+const applyTheme = (theme, animate) => {
+  const root = document.documentElement;
+  if (animate) {
+    root.classList.add('theme-anim');
+    setTimeout(() => root.classList.remove('theme-anim'), 600);
+  }
+  root.setAttribute('data-theme', theme);
+  const dark = theme === 'dark';
+  themeToggle.setAttribute('aria-label', dark ? 'Yorug‘ rejimga o‘tish' : 'Qorong‘u rejimga o‘tish');
+  themeToggle.setAttribute('aria-pressed', String(dark));
+  themeMeta.setAttribute('content', dark ? '#16130D' : '#F6F0E2');
+};
+
+applyTheme(document.documentElement.getAttribute('data-theme') || 'light', false);
+
+themeToggle.addEventListener('click', () => {
+  const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  applyTheme(next, true);
+  try { localStorage.setItem(THEME_KEY, next); } catch (_) { /* saqlab bo'lmasa — faqat shu sessiya uchun */ }
+});
+
+// Foydalanuvchi o'zi tanlamagan bo'lsa, tizim sozlamasiga ergashamiz
+systemDark.addEventListener('change', (e) => {
+  if (!readStoredTheme()) applyTheme(e.matches ? 'dark' : 'light', true);
+});
+
 /* ---------- Header on scroll ---------- */
 const header = document.getElementById('header');
 const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 40);
