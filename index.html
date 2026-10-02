@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Valmond — Premium sariyog‘</title>
   <meta name="description" content="Valmond — asl ta’mni qadrlaydiganlar uchun premium sariyog‘. Tilla naqshli korobkada 4 × 200 g. Saytda buyurtma qoldiring.">
-  <meta name="theme-color" content="#F6F0E2">
+  <meta name="theme-color" content="#F8F3E4">
   <script>
     /* Temani sahifa chizilishidan oldin qo'yamiz — oq/qora "miltillash" bo'lmasligi uchun */
     (function () {
@@ -19,26 +19,49 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=3">
+  <link rel="stylesheet" href="css/style.css?v=7">
 </head>
 <body>
+  <!-- Valmond logotipi (manba: assets/logo/valmond-logo.svg) -->
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="valmond-logo" viewBox="0 0 295 35">
+      <path d="M4.16239 4.74026C3.53234 3.28514 2.97449 2.35537 2.49751 1.94341C2.0126 1.53106 1.17997 1.28841 0 1.20791V0.0438232H6.44221H12.9169V1.20791C11.2275 1.20791 10.128 1.48267 9.63477 2.02427C9.1336 2.57382 9.16612 3.47903 9.71604 4.74026L18.4944 25.3122H18.5023L25.7367 6.07405C26.3512 4.42504 26.4401 3.22842 26.0036 2.47667C25.5591 1.72492 24.508 1.30467 22.851 1.20791V0.0438232H27.7576H32.6642V1.20791C31.5084 1.39349 30.6837 1.74913 30.1905 2.25861C29.6893 2.77603 29.0914 3.89137 28.3964 5.61294L17.5967 33.7508H17.1443H16.6999L4.16239 4.74026Z"/>
+      <path d="M47.3503 28.1824L58.9742 0.0438232H59.5237H60.0899L72.0532 29.0555C72.6515 30.5106 73.2011 31.44 73.686 31.8519C74.1792 32.2643 75.0115 32.5069 76.1998 32.5878V33.7519H70.1374H64.075V32.5878C65.4977 32.5878 66.3949 32.313 66.7748 31.7631C67.1546 31.2136 67.082 30.3084 66.5646 29.0313L63.9295 22.5966H52.0629L50.0095 27.6971C49.3307 29.3544 49.2015 30.559 49.6301 31.3107C50.0583 32.0704 51.1011 32.4907 52.7743 32.5878V33.7519H47.8594H42.9207V32.5878C44.1089 32.4019 44.9578 32.0462 45.4749 31.5208C45.984 31.0117 46.6068 29.904 47.3503 28.1824ZM58.004 8.09495L52.9277 20.5111H63.0969L58.0123 8.09495H58.004Z"/>
+      <path d="M86.4563 33.611V32.4469C88.3317 32.3176 89.5121 31.897 90.0212 31.1777C90.5223 30.4585 90.7733 28.8257 90.7733 26.2874V8.00277C90.7733 5.46444 90.5223 3.83171 90.0212 3.11209C89.5121 2.39284 88.3317 1.97255 86.4563 1.84329V0.679199H93.3354H100.231V1.84329C98.3633 1.97255 97.175 2.39284 96.6659 3.11209C96.1648 3.83171 95.9138 5.46444 95.9138 8.01071V27.6858C95.9138 29.472 96.1081 30.5556 96.4962 30.9434C96.884 31.3316 97.9672 31.5254 99.7459 31.5254H103.278C105.994 31.5254 108.136 31.0485 109.705 30.0949C111.272 29.1326 112.623 27.4919 113.762 25.1717H115.023L113.73 29.3753L112.404 33.611H95.9304H86.4563Z"/>
+      <path d="M132.022 25.3901C132.022 28.3892 132.272 30.2967 132.773 31.121C133.283 31.9374 134.471 32.3822 136.338 32.4469V33.611H130.809H125.28V32.4469C127.155 32.3822 128.336 31.9374 128.845 31.121C129.346 30.2967 129.597 28.3892 129.597 25.3822V5.70711C129.597 4.09855 129.346 3.06372 128.845 2.61093C128.336 2.16646 127.155 1.90754 125.28 1.84329V0.679199H129.896H134.536L145.893 25.5114L156.822 0.679199H161.437H166.069V1.84329C164.202 1.95629 163.014 2.36863 162.504 3.08787C162.003 3.80749 161.752 5.44819 161.752 8.00277V26.2874C161.752 28.8416 162.003 30.4827 162.504 31.2019C163.014 31.9215 164.202 32.3339 166.069 32.4469V33.611H159.198H152.295V32.4469C154.17 32.3339 155.35 32.0266 155.86 31.5092C156.361 31.0001 156.612 29.8439 156.612 28.0415V6.76575H156.627L144.777 33.611H144.325H143.872L132.038 7.51789H132.022V25.3901Z"/>
+      <path d="M192.113 34.2898C187.489 34.2898 183.706 32.6895 180.755 29.4883C177.805 26.2874 176.326 22.173 176.326 17.1451C176.326 12.1088 177.805 7.99446 180.755 4.79358C183.706 1.60063 187.489 0 192.113 0C196.752 0 200.543 1.60063 203.486 4.79358C206.428 7.99446 207.899 12.1088 207.899 17.1451C207.899 22.173 206.428 26.2874 203.486 29.4883C200.543 32.6895 196.752 34.2898 192.113 34.2898ZM192.113 32.2046C195.2 32.2046 197.642 30.8545 199.436 28.1545C201.23 25.4547 202.128 21.7848 202.128 17.1451C202.128 12.5133 201.23 8.84333 199.436 6.14361C197.642 3.43558 195.2 2.08553 192.113 2.08553C189.041 2.08553 186.608 3.43558 184.805 6.14361C183.002 8.84333 182.097 12.5133 182.097 17.1451C182.097 21.7848 183.002 25.4547 184.805 28.1545C186.608 30.8545 189.041 32.2046 192.113 32.2046Z"/>
+      <path d="M225.221 25.3901C225.221 28.3892 225.472 30.2967 225.973 31.121C226.482 31.9457 227.67 32.3822 229.537 32.4469V33.611H224.009H218.48V32.4469C220.355 32.3822 221.535 31.9374 222.044 31.121C222.545 30.2967 222.796 28.3892 222.796 25.3822V4.4058C222.053 3.50022 221.438 2.89399 220.953 2.57878C220.298 2.16643 219.369 1.92379 218.156 1.84329V0.679199H222.327H226.498L244.718 24.0647V8.90004C244.718 5.90099 244.468 3.99347 243.967 3.16878C243.458 2.3524 242.278 1.90754 240.402 1.84329V0.679199H245.931H251.46V1.84329C249.593 1.90754 248.405 2.3524 247.895 3.16878C247.394 3.99347 247.143 5.90098 247.143 8.90798V34.3869H246.691H246.238L225.221 7.39617V25.3901Z"/>
+      <path d="M266.035 26.2874V8.00277C266.035 5.44819 265.784 3.80749 265.282 3.08787C264.773 2.36863 263.593 1.95629 261.718 1.84329V0.679199H268.605H274.594C280.698 0.679199 285.467 2.16644 288.91 5.13299C292.346 8.09954 294.067 12.2143 294.067 17.4845C294.067 22.5366 292.305 26.4896 288.781 29.3348C285.249 32.1883 280.35 33.611 274.069 33.611H268.605H261.718V32.4469C263.593 32.3339 264.773 31.9136 265.282 31.194C265.784 30.4827 266.035 28.8416 266.035 26.2874ZM271.175 28.7528C271.175 29.9411 271.337 30.6928 271.668 31.0243C272 31.3557 272.76 31.5254 273.94 31.5254H274.012C278.475 31.5254 281.951 30.2888 284.448 27.8071C286.946 25.3334 288.199 21.874 288.199 17.4441C288.199 12.8285 286.994 9.23113 284.594 6.6448C282.193 4.05771 278.838 2.76473 274.538 2.76473H273.996C272.824 2.76473 272.064 2.94276 271.709 3.29804C271.353 3.65369 271.175 4.41374 271.175 5.57745V28.7528Z"/>
+    </symbol>
+  </svg>
 
   <!-- ============ HEADER ============ -->
   <header class="header" id="header">
     <div class="container header__inner">
-      <a href="#top" class="logo" aria-label="Valmond — bosh sahifa">
-        <span class="logo__mark">V</span>
-        <span class="logo__word">VALMOND</span>
+      <a href="#top" class="logo" aria-label="Valmond — bosh sahifa" data-i18n-attr="aria-label:logo.aria">
+        <svg class="logo__img" viewBox="0 0 295 35" aria-hidden="true"><use href="#valmond-logo"/></svg>
       </a>
 
-      <nav class="nav" id="nav" aria-label="Asosiy menyu">
-        <a href="#falsafa">Falsafa</a>
-        <a href="#tam">Ta’m</a>
-        <a href="#kolleksiya">Kolleksiya</a>
-        <a href="#gastronomiya">Gastronomiya</a>
-        <a href="#savollar">Savollar</a>
-        <a href="#buyurtma" class="btn btn--gold nav__cta">Buyurtma berish</a>
+      <nav class="nav" id="nav" aria-label="Asosiy menyu" data-i18n-attr="aria-label:nav.aria">
+        <a href="#falsafa" data-i18n="nav.philosophy">Falsafa</a>
+        <a href="#tam" data-i18n="nav.taste">Ta’m</a>
+        <a href="#kolleksiya" data-i18n="nav.collection">Kolleksiya</a>
+        <a href="#gastronomiya" data-i18n="nav.gastronomy">Gastronomiya</a>
+        <a href="#savollar" data-i18n="nav.faq">Savollar</a>
+        <a href="#buyurtma" class="btn btn--gold nav__cta" data-i18n="nav.order">Buyurtma berish</a>
       </nav>
+
+      <div class="lang" id="lang">
+        <button class="lang__btn" id="langBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="langMenu" aria-label="Tilni tanlang" data-i18n-attr="aria-label:lang.aria">
+          <span id="langCurrent">UZ</span>
+          <svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
+        </button>
+        <ul class="lang__menu" id="langMenu" role="menu" hidden>
+          <li role="none"><button type="button" role="menuitemradio" aria-checked="true" data-lang="uz" lang="uz"><b>UZ</b>O‘zbekcha</button></li>
+          <li role="none"><button type="button" role="menuitemradio" aria-checked="false" data-lang="en" lang="en"><b>EN</b>English</button></li>
+          <li role="none"><button type="button" role="menuitemradio" aria-checked="false" data-lang="ru" lang="ru"><b>RU</b>Русский</button></li>
+        </ul>
+      </div>
 
       <button class="theme-toggle" id="themeToggle" type="button" aria-label="Qorong‘u rejimga o‘tish">
         <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -63,23 +86,17 @@
       <div class="hero__bg" aria-hidden="true"></div>
       <div class="container hero__inner">
         <div class="hero__text">
-          <p class="eyebrow reveal">Premium sariyog‘ · Maison Valmond</p>
-          <h1 class="hero__title reveal">
-            Ta’mning<br><em>oliy</em> darajasi
-          </h1>
-          <p class="hero__lead reveal">
-            Yevropa gastronomiyasining asl ta’mini sog‘inganlar va eng yaxshisiga
-            o‘rganganlar uchun yaratilgan sariyog‘. Har bir bo‘lakda — qaymoqning
-            nozik shirinligi va sof, baxmaldek tuzilma.
-          </p>
+          <p class="eyebrow reveal" data-i18n="hero.eyebrow">Premium sariyog‘ · Maison Valmond</p>
+          <h1 class="hero__title reveal" data-i18n="hero.title">Ta’mning<br><em>oliy</em> darajasi</h1>
+          <p class="hero__lead reveal" data-i18n="hero.lead">Yevropa gastronomiyasining asl ta’mini sog‘inganlar va eng yaxshisiga o‘rganganlar uchun yaratilgan sariyog‘. Har bir bo‘lakda — qaymoqning nozik shirinligi va sof, baxmaldek tuzilma.</p>
           <div class="hero__actions reveal">
-            <a href="#buyurtma" class="btn btn--gold">Buyurtma qoldirish</a>
-            <a href="#tam" class="btn btn--ghost">Ta’m bilan tanishish</a>
+            <a href="#buyurtma" class="btn btn--gold" data-i18n="hero.cta1">Buyurtma qoldirish</a>
+            <a href="#tam" class="btn btn--ghost" data-i18n="hero.cta2">Ta’m bilan tanishish</a>
           </div>
           <ul class="hero__facts reveal">
-            <li><strong>4 × 200 g</strong><span>bir korobkada</span></li>
-            <li><strong>82%</strong><span>sut yog‘i</span></li>
-            <li><strong>100%</strong><span>tabiiy qaymoq</span></li>
+            <li><strong data-i18n="u.pack">4 × 200 g</strong><span data-i18n="hero.f1">bir korobkada</span></li>
+            <li><strong>82%</strong><span data-i18n="hero.f2">sut yog‘i</span></li>
+            <li><strong>100%</strong><span data-i18n="hero.f3">tabiiy qaymoq</span></li>
           </ul>
         </div>
 
@@ -137,7 +154,7 @@
               <path d="M50 10 C 58 -8, 52 -28, 40 -38 M54 -2 l9 -4 M52 -16 l9 -2 M46 -28 l8 0" stroke="url(#gold)" stroke-width="1.2" fill="none"/>
             </g>
 
-            <text x="200" y="352" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="30" letter-spacing="9" fill="url(#gold)">VALMOND</text>
+            <use href="#valmond-logo" x="115" y="334" width="170" height="20" fill="url(#gold)"/>
             <line x1="150" y1="366" x2="250" y2="366" stroke="url(#gold)" stroke-width=".8"/>
             <text x="200" y="386" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-size="8.5" letter-spacing="3.5" fill="#9A7A43">PREMIUM BUTTER · 4 × 200 G</text>
 
@@ -145,50 +162,39 @@
             <rect class="box__shine" x="50" y="150" width="300" height="270" fill="url(#gold)" opacity="0"/>
           </svg>
           <div class="hero__badge">
-            <span>Tilla</span>
-            <span>tisneniya</span>
+            <span data-i18n="hero.badge1">Tilla</span>
+            <span data-i18n="hero.badge2">tisneniya</span>
           </div>
         </div>
       </div>
-      <a href="#falsafa" class="hero__scroll" aria-label="Pastga o‘tish"><span></span></a>
+      <a href="#falsafa" class="hero__scroll" aria-label="Pastga o‘tish" data-i18n-attr="aria-label:hero.scroll"><span></span></a>
     </section>
 
     <!-- ============ MARQUEE ============ -->
     <div class="marquee" aria-hidden="true">
       <div class="marquee__track">
-        <span>Qaymoq shirinligi</span><i>✦</i>
-        <span>Baxmaldek tuzilma</span><i>✦</i>
-        <span>Yevropa an’anasi</span><i>✦</i>
-        <span>Tilla naqshli korobka</span><i>✦</i>
-        <span>Faqat tabiiy tarkib</span><i>✦</i>
-        <span>Qaymoq shirinligi</span><i>✦</i>
-        <span>Baxmaldek tuzilma</span><i>✦</i>
-        <span>Yevropa an’anasi</span><i>✦</i>
-        <span>Tilla naqshli korobka</span><i>✦</i>
-        <span>Faqat tabiiy tarkib</span><i>✦</i>
+        <span data-i18n="mq.1">Qaymoq shirinligi</span><i>✦</i>
+        <span data-i18n="mq.2">Baxmaldek tuzilma</span><i>✦</i>
+        <span data-i18n="mq.3">Yevropa an’anasi</span><i>✦</i>
+        <span data-i18n="mq.4">Tilla naqshli korobka</span><i>✦</i>
+        <span data-i18n="mq.5">Faqat tabiiy tarkib</span><i>✦</i>
+        <span data-i18n="notes.1">Qaymoq shirinligi</span><i>✦</i>
+        <span data-i18n="taste.c3.t">Baxmaldek tuzilma</span><i>✦</i>
+        <span data-i18n="mq.3">Yevropa an’anasi</span><i>✦</i>
+        <span data-i18n="mq.4">Tilla naqshli korobka</span><i>✦</i>
+        <span data-i18n="mq.5">Faqat tabiiy tarkib</span><i>✦</i>
       </div>
     </div>
 
     <!-- ============ PHILOSOPHY ============ -->
     <section class="section philosophy" id="falsafa">
       <div class="container philosophy__inner">
-        <p class="eyebrow reveal">Falsafamiz</p>
-        <blockquote class="philosophy__quote reveal">
-          “Haqiqiy hashamat — baland ovozda gapirmaydi.
-          U <em>ta’mda</em> seziladi.”
-        </blockquote>
+        <p class="eyebrow reveal" data-i18n="phil.eyebrow">Falsafamiz</p>
+        <blockquote class="philosophy__quote reveal" data-i18n="phil.quote">“Haqiqiy hashamat — baland ovozda gapirmaydi. U <em>ta’mda</em> seziladi.”</blockquote>
         <div class="divider reveal" aria-hidden="true"><span></span>✦<span></span></div>
         <div class="philosophy__cols">
-          <p class="reveal">
-            Valmond — bu shoshilmaslik madaniyati. Biz eng yaxshi qaymoqni tanlaymiz,
-            uni sabr bilan pishiramiz va har bir bo‘lakni Yevropa oshxonalaridagi
-            eng yuqori talablarga javob beradigan holatga keltiramiz.
-          </p>
-          <p class="reveal">
-            Parijdagi nonushtani, Kopengagendagi yangi pishgan nonni yoki Milandagi
-            restoran sousini eslaysizmi? Valmond o‘sha ta’mni Toshkentdagi
-            dasturxoningizga qaytaradi — hech qanday murosasiz.
-          </p>
+          <p class="reveal" data-i18n="phil.p1">Valmond — bu shoshilmaslik madaniyati. Biz eng yaxshi qaymoqni tanlaymiz, uni sabr bilan pishiramiz va har bir bo‘lakni Yevropa oshxonalaridagi eng yuqori talablarga javob beradigan holatga keltiramiz.</p>
+          <p class="reveal" data-i18n="phil.p2">Parijdagi nonushtani, Kopengagendagi yangi pishgan nonni yoki Milandagi restoran sousini eslaysizmi? Valmond o‘sha ta’mni Toshkentdagi dasturxoningizga qaytaradi — hech qanday murosasiz.</p>
         </div>
       </div>
     </section>
@@ -197,40 +203,40 @@
     <section class="section taste" id="tam">
       <div class="container">
         <header class="section__head">
-          <p class="eyebrow reveal">Ta’m anatomiyasi</p>
-          <h2 class="section__title reveal">Nima uchun Valmond<br><em>boshqacha</em></h2>
+          <p class="eyebrow reveal" data-i18n="taste.eyebrow">Ta’m anatomiyasi</p>
+          <h2 class="section__title reveal" data-i18n="taste.title">Nima uchun Valmond<br><em>boshqacha</em></h2>
         </header>
 
         <div class="taste__grid">
           <article class="card reveal">
             <span class="card__num">01</span>
-            <h3>Tanlangan qaymoq</h3>
-            <p>Faqat yangi, yuqori yog‘li sut qaymog‘i. Hech qanday o‘simlik yog‘i, bo‘yoq yoki konservant — tarkib qisqa va halol.</p>
+            <h3 data-i18n="taste.c1.t">Tanlangan qaymoq</h3>
+            <p data-i18n="taste.c1.p">Faqat yangi, yuqori yog‘li sut qaymog‘i. Hech qanday o‘simlik yog‘i, bo‘yoq yoki konservant — tarkib qisqa va halol.</p>
           </article>
           <article class="card reveal">
             <span class="card__num">02</span>
-            <h3>Sekin pishirish</h3>
-            <p>Qaymoq shoshilmasdan, an’anaviy usulda ishlanadi. Natijada — chuqur, yoqimli va uzoq saqlanadigan ta’m izi.</p>
+            <h3 data-i18n="taste.c2.t">Sekin pishirish</h3>
+            <p data-i18n="taste.c2.p">Qaymoq shoshilmasdan, an’anaviy usulda ishlanadi. Natijada — chuqur, yoqimli va uzoq saqlanadigan ta’m izi.</p>
           </article>
           <article class="card reveal">
             <span class="card__num">03</span>
             <h3>Baxmaldek tuzilma</h3>
-            <p>82% sut yog‘i sariyog‘ni og‘izda sekin eriydigan, nonga tekis yoyiladigan va oshxonada barqaror qiladi.</p>
+            <p data-i18n="taste.c3.p">82% sut yog‘i sariyog‘ni og‘izda sekin eriydigan, nonga tekis yoyiladigan va oshxonada barqaror qiladi.</p>
           </article>
           <article class="card reveal">
             <span class="card__num">04</span>
-            <h3>Toza nota</h3>
-            <p>Yengil qaymoq shirinligi, nozik yong‘oq ohangi va toza yakun. Premium sariyog‘ni oddiydan ajratib turuvchi aynan shu.</p>
+            <h3 data-i18n="taste.c4.t">Toza nota</h3>
+            <p data-i18n="taste.c4.p">Yengil qaymoq shirinligi, nozik yong‘oq ohangi va toza yakun. Premium sariyog‘ni oddiydan ajratib turuvchi aynan shu.</p>
           </article>
         </div>
 
         <div class="notes reveal">
-          <h3 class="notes__title">Degustatsiya notalari</h3>
+          <h3 class="notes__title" data-i18n="notes.title">Degustatsiya notalari</h3>
           <div class="notes__bars">
             <div class="note"><span>Qaymoq shirinligi</span><div class="note__bar"><i style="--v:.92"></i></div></div>
-            <div class="note"><span>Yong‘oq ohangi</span><div class="note__bar"><i style="--v:.58"></i></div></div>
-            <div class="note"><span>Mayinlik</span><div class="note__bar"><i style="--v:.96"></i></div></div>
-            <div class="note"><span>Yakun davomiyligi</span><div class="note__bar"><i style="--v:.8"></i></div></div>
+            <div class="note"><span data-i18n="notes.2">Yong‘oq ohangi</span><div class="note__bar"><i style="--v:.58"></i></div></div>
+            <div class="note"><span data-i18n="notes.3">Mayinlik</span><div class="note__bar"><i style="--v:.96"></i></div></div>
+            <div class="note"><span data-i18n="notes.4">Yakun davomiyligi</span><div class="note__bar"><i style="--v:.8"></i></div></div>
           </div>
         </div>
       </div>
@@ -241,30 +247,26 @@
       <div class="container collection__inner">
         <div class="collection__visual reveal" aria-hidden="true">
           <div class="bars">
-            <div class="bar"><span>VALMOND</span><small>200 g</small></div>
-            <div class="bar"><span>VALMOND</span><small>200 g</small></div>
-            <div class="bar"><span>VALMOND</span><small>200 g</small></div>
-            <div class="bar"><span>VALMOND</span><small>200 g</small></div>
+            <div class="bar"><svg class="bar__logo" viewBox="0 0 295 35"><use href="#valmond-logo" fill="url(#gold)"/></svg><small data-i18n="u.g200">200 g</small></div>
+            <div class="bar"><svg class="bar__logo" viewBox="0 0 295 35"><use href="#valmond-logo" fill="url(#gold)"/></svg><small data-i18n="u.g200">200 g</small></div>
+            <div class="bar"><svg class="bar__logo" viewBox="0 0 295 35"><use href="#valmond-logo" fill="url(#gold)"/></svg><small data-i18n="u.g200">200 g</small></div>
+            <div class="bar"><svg class="bar__logo" viewBox="0 0 295 35"><use href="#valmond-logo" fill="url(#gold)"/></svg><small data-i18n="u.g200">200 g</small></div>
           </div>
-          <p class="collection__caption">Coffret Signature · 800 g</p>
+          <p class="collection__caption" data-i18n="col.caption">Coffret Signature · 800 g</p>
         </div>
 
         <div class="collection__text">
-          <p class="eyebrow reveal">Kolleksiya</p>
-          <h2 class="section__title reveal">Coffret<br><em>Signature</em></h2>
-          <p class="reveal">
-            Fil suyagi rangidagi qattiq korobka, qo‘lda his qilinadigan tilla tisneniya
-            va ichida to‘rtta alohida qadoqlangan 200 grammlik sariyog‘. Oila dasturxoni
-            uchun ham, qadrli insonga sovg‘a uchun ham bir xil darajada munosib.
-          </p>
+          <p class="eyebrow reveal" data-i18n="col.eyebrow">Kolleksiya</p>
+          <h2 class="section__title reveal" data-i18n="col.title">Coffret<br><em>Signature</em></h2>
+          <p class="reveal" data-i18n="col.p">Fil suyagi rangidagi qattiq korobka, qo‘lda his qilinadigan tilla tisneniya va ichida to‘rtta alohida qadoqlangan 200 grammlik sariyog‘. Oila dasturxoni uchun ham, qadrli insonga sovg‘a uchun ham bir xil darajada munosib.</p>
           <ul class="specs reveal">
-            <li><span>Tarkib</span><b>4 × 200 g sariyog‘</b></li>
-            <li><span>Umumiy og‘irlik</span><b>800 g</b></li>
-            <li><span>Sut yog‘i</span><b>82%</b></li>
-            <li><span>Qadoq</span><b>Tilla tisneniyali premium korobka</b></li>
-            <li><span>Saqlash</span><b>+2 … +6 °C</b></li>
+            <li><span data-i18n="col.s1.l">Tarkib</span><b data-i18n="col.s1.v">4 × 200 g sariyog‘</b></li>
+            <li><span data-i18n="col.s2.l">Umumiy og‘irlik</span><b data-i18n="u.g800">800 g</b></li>
+            <li><span data-i18n="col.s3.l">Sut yog‘i</span><b>82%</b></li>
+            <li><span data-i18n="col.s4.l">Qadoq</span><b data-i18n="col.s4.v">Tilla tisneniyali premium korobka</b></li>
+            <li><span data-i18n="col.s5.l">Saqlash</span><b>+2 … +6 °C</b></li>
           </ul>
-          <a href="#buyurtma" class="btn btn--gold reveal">Korobkaga buyurtma berish</a>
+          <a href="#buyurtma" class="btn btn--gold reveal" data-i18n="col.cta">Korobkaga buyurtma berish</a>
         </div>
       </div>
     </section>
@@ -273,30 +275,30 @@
     <section class="section gastronomy" id="gastronomiya">
       <div class="container">
         <header class="section__head">
-          <p class="eyebrow reveal">Gastronomiya</p>
-          <h2 class="section__title reveal">Valmond bilan<br><em>kundalik marosimlar</em></h2>
+          <p class="eyebrow reveal" data-i18n="gast.eyebrow">Gastronomiya</p>
+          <h2 class="section__title reveal" data-i18n="gast.title">Valmond bilan<br><em>kundalik marosimlar</em></h2>
         </header>
 
         <div class="moments">
           <article class="moment reveal">
             <div class="moment__art moment__art--1"><span>I</span></div>
-            <h3>Nonushta</h3>
-            <p>Issiq kruassan yoki tandir noni ustida sekin eriyotgan Valmond — kunning eng yaxshi boshlanishi.</p>
+            <h3 data-i18n="gast.m1.t">Nonushta</h3>
+            <p data-i18n="gast.m1.p">Issiq kruassan yoki tandir noni ustida sekin eriyotgan Valmond — kunning eng yaxshi boshlanishi.</p>
           </article>
           <article class="moment reveal">
             <div class="moment__art moment__art--2"><span>II</span></div>
-            <h3>Steyk va baliq</h3>
-            <p>Tovaning so‘nggi daqiqasida sarimsoq va rozmarin bilan — restoran darajasidagi arrosé uyingizda.</p>
+            <h3 data-i18n="gast.m2.t">Steyk va baliq</h3>
+            <p data-i18n="gast.m2.p">Tovaning so‘nggi daqiqasida sarimsoq va rozmarin bilan — restoran darajasidagi arrosé uyingizda.</p>
           </article>
           <article class="moment reveal">
             <div class="moment__art moment__art--3"><span>III</span></div>
-            <h3>Souslar</h3>
-            <p>Beurre blanc va gollandez sousi uchun barqaror emulsiya — Valmondning toza tuzilmasi buni osonlashtiradi.</p>
+            <h3 data-i18n="gast.m3.t">Souslar</h3>
+            <p data-i18n="gast.m3.p">Beurre blanc va gollandez sousi uchun barqaror emulsiya — Valmondning toza tuzilmasi buni osonlashtiradi.</p>
           </article>
           <article class="moment reveal">
             <div class="moment__art moment__art--4"><span>IV</span></div>
-            <h3>Pishiriqlar</h3>
-            <p>Qatlamli xamir, briosh va shortbread — sariyog‘ sifati to‘g‘ridan to‘g‘ri natijada ko‘rinadi.</p>
+            <h3 data-i18n="gast.m4.t">Pishiriqlar</h3>
+            <p data-i18n="gast.m4.p">Qatlamli xamir, briosh va shortbread — sariyog‘ sifati to‘g‘ridan to‘g‘ri natijada ko‘rinadi.</p>
           </article>
         </div>
       </div>
@@ -306,19 +308,15 @@
     <section class="section audience">
       <div class="container audience__inner">
         <div class="audience__text">
-          <p class="eyebrow eyebrow--light reveal">Kimlar uchun</p>
-          <h2 class="section__title section__title--light reveal">Farqni biladiganlar<br><em>uchun</em></h2>
-          <p class="reveal">
-            Valmond — sifatni birinchi luqmadan ajrata oladigan insonlar tanlovi.
-            Qarorlarni o‘zi qabul qiladigan, dunyoni ko‘rgan va dasturxonida faqat
-            eng yaxshisini ko‘rishni istaydiganlar uchun.
-          </p>
+          <p class="eyebrow eyebrow--light reveal" data-i18n="aud.eyebrow">Kimlar uchun</p>
+          <h2 class="section__title section__title--light reveal" data-i18n="aud.title">Farqni biladiganlar<br><em>uchun</em></h2>
+          <p class="reveal" data-i18n="aud.p">Valmond — sifatni birinchi luqmadan ajrata oladigan insonlar tanlovi. Qarorlarni o‘zi qabul qiladigan, dunyoni ko‘rgan va dasturxonida faqat eng yaxshisini ko‘rishni istaydiganlar uchun.</p>
         </div>
         <ul class="audience__list">
-          <li class="reveal"><span>✦</span>Yevropada yashab, asl gastronomik ta’mni sog‘ingan vatandoshlar</li>
-          <li class="reveal"><span>✦</span>Tadbirkorlar va top-menejerlar — o‘zi va oilasi uchun</li>
-          <li class="reveal"><span>✦</span>Hamkor va mehmonlarga munosib sovg‘a izlayotganlar</li>
-          <li class="reveal"><span>✦</span>Uyda restoran darajasida pishirishni sevuvchi gurmanlar</li>
+          <li class="reveal"><span aria-hidden="true">✦</span><div data-i18n="aud.1">Yevropada yashab, asl gastronomik ta’mni sog‘ingan vatandoshlar</div></li>
+          <li class="reveal"><span aria-hidden="true">✦</span><div data-i18n="aud.2">Tadbirkorlar va top-menejerlar — o‘zi va oilasi uchun</div></li>
+          <li class="reveal"><span aria-hidden="true">✦</span><div data-i18n="aud.3">Hamkor va mehmonlarga munosib sovg‘a izlayotganlar</div></li>
+          <li class="reveal"><span aria-hidden="true">✦</span><div data-i18n="aud.4">Uyda restoran darajasida pishirishni sevuvchi gurmanlar</div></li>
         </ul>
       </div>
     </section>
@@ -327,86 +325,83 @@
     <section class="section order" id="buyurtma">
       <div class="container order__inner">
         <div class="order__intro">
-          <p class="eyebrow reveal">Buyurtma</p>
-          <h2 class="section__title reveal">Buyurtma<br><em>qoldiring</em></h2>
-          <p class="reveal">
-            Arizani to‘ldiring — shaxsiy menejeringiz 30 daqiqa ichida siz bilan
-            bog‘lanib, yetkazib berish vaqti va tafsilotlarni kelishib oladi.
-          </p>
+          <p class="eyebrow reveal" data-i18n="order.eyebrow">Buyurtma</p>
+          <h2 class="section__title reveal" data-i18n="order.title">Buyurtma<br><em>qoldiring</em></h2>
+          <p class="reveal" data-i18n="order.p">Arizani to‘ldiring — shaxsiy menejeringiz 30 daqiqa ichida siz bilan bog‘lanib, yetkazib berish vaqti va tafsilotlarni kelishib oladi.</p>
           <ul class="perks reveal">
-            <li>Toshkent bo‘ylab sovutgichli yetkazib berish</li>
-            <li>Sovg‘a uchun shaxsiy tabrik kartochkasi</li>
-            <li>Korporativ buyurtmalar uchun alohida shartlar</li>
+            <li data-i18n="order.perk1">Toshkent bo‘ylab sovutgichli yetkazib berish</li>
+            <li data-i18n="order.perk2">Sovg‘a uchun shaxsiy tabrik kartochkasi</li>
+            <li data-i18n="order.perk3">Korporativ buyurtmalar uchun alohida shartlar</li>
           </ul>
         </div>
 
         <form class="form reveal" id="orderForm" novalidate>
           <fieldset class="form__type">
-            <legend>Buyurtma turi</legend>
-            <label><input type="radio" name="type" value="Shaxsiy" checked><span>Shaxsiy</span></label>
-            <label><input type="radio" name="type" value="Sovg‘a"><span>Sovg‘a</span></label>
-            <label><input type="radio" name="type" value="Korporativ"><span>Korporativ</span></label>
+            <legend data-i18n="form.type">Buyurtma turi</legend>
+            <label><input type="radio" name="type" value="Shaxsiy" checked><span data-i18n="form.type.personal">Shaxsiy</span></label>
+            <label><input type="radio" name="type" value="Sovg‘a"><span data-i18n="form.type.gift">Sovg‘a</span></label>
+            <label><input type="radio" name="type" value="Korporativ"><span data-i18n="form.type.corporate">Korporativ</span></label>
           </fieldset>
 
           <div class="field">
             <input type="text" id="name" name="name" placeholder=" " autocomplete="name" required>
-            <label for="name">Ismingiz</label>
-            <small class="field__error">Iltimos, ismingizni kiriting</small>
+            <label for="name" data-i18n="form.name">Ismingiz</label>
+            <small class="field__error" data-i18n="form.name.err">Iltimos, ismingizni kiriting</small>
           </div>
 
           <div class="field">
             <input type="tel" id="phone" name="phone" placeholder=" " autocomplete="tel" inputmode="tel" required>
-            <label for="phone">Telefon raqam</label>
-            <small class="field__error">Raqamni to‘liq kiriting: +998 XX XXX XX XX</small>
+            <label for="phone" data-i18n="form.phone">Telefon raqam</label>
+            <small class="field__error" data-i18n="form.phone.err">Raqamni to‘liq kiriting: +998 XX XXX XX XX</small>
           </div>
 
           <div class="form__row">
             <div class="field field--qty">
-              <span class="field__label">Korobkalar soni</span>
+              <span class="field__label" data-i18n="form.qty">Korobkalar soni</span>
               <div class="qty">
-                <button type="button" class="qty__btn" data-step="-1" aria-label="Kamaytirish">−</button>
-                <input type="number" id="qty" name="qty" value="1" min="1" max="99" aria-label="Korobkalar soni">
-                <button type="button" class="qty__btn" data-step="1" aria-label="Ko‘paytirish">+</button>
+                <button type="button" class="qty__btn" data-step="-1" aria-label="Kamaytirish" data-i18n-attr="aria-label:form.qty.dec">−</button>
+                <input type="number" id="qty" name="qty" value="1" min="1" max="99" aria-label="Korobkalar soni" data-i18n-attr="aria-label:form.qty">
+                <button type="button" class="qty__btn" data-step="1" aria-label="Ko‘paytirish" data-i18n-attr="aria-label:form.qty.inc">+</button>
               </div>
-              <small class="qty__hint"><b id="qtyTotal">4</b> × 200 g · <b id="qtyWeight">800 g</b></small>
+              <small class="qty__hint"><b id="qtyTotal">4</b> × <span data-i18n="u.g200">200 g</span> · <b id="qtyWeight">800 g</b></small>
             </div>
 
             <div class="field field--select">
               <select id="city" name="city" required>
-                <option value="Toshkent" selected>Toshkent</option>
-                <option value="Toshkent viloyati">Toshkent viloyati</option>
-                <option value="Samarqand">Samarqand</option>
-                <option value="Buxoro">Buxoro</option>
-                <option value="Farg‘ona">Farg‘ona</option>
-                <option value="Boshqa">Boshqa shahar</option>
+                <option value="Toshkent" selected data-i18n="city.tashkent">Toshkent</option>
+                <option value="Toshkent viloyati" data-i18n="city.tashkentRegion">Toshkent viloyati</option>
+                <option value="Samarqand" data-i18n="city.samarkand">Samarqand</option>
+                <option value="Buxoro" data-i18n="city.bukhara">Buxoro</option>
+                <option value="Farg‘ona" data-i18n="city.fergana">Farg‘ona</option>
+                <option value="Boshqa" data-i18n="city.other">Boshqa shahar</option>
               </select>
-              <label for="city">Shahar</label>
+              <label for="city" data-i18n="form.city">Shahar</label>
             </div>
           </div>
 
           <div class="field field--gift" id="giftField" hidden>
             <textarea id="giftNote" name="giftNote" rows="2" placeholder=" " maxlength="200"></textarea>
-            <label for="giftNote">Tabrik kartochkasi uchun matn</label>
+            <label for="giftNote" data-i18n="form.gift">Tabrik kartochkasi uchun matn</label>
           </div>
 
           <div class="field">
             <textarea id="comment" name="comment" rows="2" placeholder=" " maxlength="500"></textarea>
-            <label for="comment">Izoh (ixtiyoriy)</label>
+            <label for="comment" data-i18n="form.comment">Izoh (ixtiyoriy)</label>
           </div>
 
           <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
 
           <label class="consent">
             <input type="checkbox" id="consent" name="consent" required>
-            <span>Ma’lumotlarim buyurtmani rasmiylashtirish uchun ishlatilishiga roziman</span>
+            <span data-i18n="form.consent">Ma’lumotlarim buyurtmani rasmiylashtirish uchun ishlatilishiga roziman</span>
           </label>
-          <small class="field__error field__error--consent">Davom etish uchun rozilik belgisini qo‘ying</small>
+          <small class="field__error field__error--consent" data-i18n="form.consent.err">Davom etish uchun rozilik belgisini qo‘ying</small>
 
           <button type="submit" class="btn btn--gold btn--block" id="submitBtn">
-            <span class="btn__label">Arizani yuborish</span>
+            <span class="btn__label" data-i18n="form.submit">Arizani yuborish</span>
             <span class="btn__spinner" aria-hidden="true"></span>
           </button>
-          <p class="form__note">Hech qanday oldindan to‘lov talab qilinmaydi.</p>
+          <p class="form__note" data-i18n="form.note">Hech qanday oldindan to‘lov talab qilinmaydi.</p>
         </form>
       </div>
     </section>
@@ -415,30 +410,30 @@
     <section class="section faq" id="savollar">
       <div class="container faq__inner">
         <header class="section__head section__head--left">
-          <p class="eyebrow reveal">Savollar</p>
-          <h2 class="section__title reveal">Ko‘p beriladigan<br><em>savollar</em></h2>
+          <p class="eyebrow reveal" data-i18n="faq.eyebrow">Savollar</p>
+          <h2 class="section__title reveal" data-i18n="faq.title">Ko‘p beriladigan<br><em>savollar</em></h2>
         </header>
 
         <div class="accordion">
           <details class="reveal">
-            <summary>Yetkazib berish qancha vaqt oladi?</summary>
-            <p>Toshkent bo‘ylab odatda buyurtma kuni yoki ertasi kuni, sovutgichli transportda yetkaziladi. Viloyatlarga muddat menejer bilan kelishiladi.</p>
+            <summary data-i18n="faq.1.q">Yetkazib berish qancha vaqt oladi?</summary>
+            <p data-i18n="faq.1.a">Toshkent bo‘ylab odatda buyurtma kuni yoki ertasi kuni, sovutgichli transportda yetkaziladi. Viloyatlarga muddat menejer bilan kelishiladi.</p>
           </details>
           <details class="reveal">
-            <summary>To‘lov qanday amalga oshiriladi?</summary>
-            <p>To‘lov mahsulotni qabul qilganda naqd pul yoki karta orqali amalga oshiriladi. Korporativ mijozlar uchun pul o‘tkazish orqali to‘lov mavjud.</p>
+            <summary data-i18n="faq.2.q">To‘lov qanday amalga oshiriladi?</summary>
+            <p data-i18n="faq.2.a">To‘lov mahsulotni qabul qilganda naqd pul yoki karta orqali amalga oshiriladi. Korporativ mijozlar uchun pul o‘tkazish orqali to‘lov mavjud.</p>
           </details>
           <details class="reveal">
-            <summary>Sariyog‘ni qanday saqlash kerak?</summary>
-            <p>+2 … +6 °C haroratda, yopiq qadoqda saqlang. Eng yaxshi ta’m uchun iste’moldan 10–15 daqiqa oldin xona haroratiga chiqarib qo‘ying.</p>
+            <summary data-i18n="faq.3.q">Sariyog‘ni qanday saqlash kerak?</summary>
+            <p data-i18n="faq.3.a">+2 … +6 °C haroratda, yopiq qadoqda saqlang. Eng yaxshi ta’m uchun iste’moldan 10–15 daqiqa oldin xona haroratiga chiqarib qo‘ying.</p>
           </details>
           <details class="reveal">
-            <summary>Korporativ sovg‘a sifatida buyurtma bersa bo‘ladimi?</summary>
-            <p>Albatta. Arizada “Korporativ” turini tanlang — menejerimiz miqdor, shaxsiy kartochkalar va yetkazib berish jadvali bo‘yicha alohida taklif tayyorlaydi.</p>
+            <summary data-i18n="faq.4.q">Korporativ sovg‘a sifatida buyurtma bersa bo‘ladimi?</summary>
+            <p data-i18n="faq.4.a">Albatta. Arizada “Korporativ” turini tanlang — menejerimiz miqdor, shaxsiy kartochkalar va yetkazib berish jadvali bo‘yicha alohida taklif tayyorlaydi.</p>
           </details>
           <details class="reveal">
-            <summary>Faqat bitta 200 g qadoqni olsa bo‘ladimi?</summary>
-            <p>Valmond faqat Coffret Signature korobkasida — 4 × 200 g ko‘rinishida taqdim etiladi. Bu mahsulotning yangiligi va taqdimot sifatini saqlash uchun.</p>
+            <summary data-i18n="faq.5.q">Faqat bitta 200 g qadoqni olsa bo‘ladimi?</summary>
+            <p data-i18n="faq.5.a">Valmond faqat Coffret Signature korobkasida — 4 × 200 g ko‘rinishida taqdim etiladi. Bu mahsulotning yangiligi va taqdimot sifatini saqlash uchun.</p>
           </details>
         </div>
       </div>
@@ -449,31 +444,30 @@
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">
-        <a href="#top" class="logo logo--light">
-          <span class="logo__mark">V</span>
-          <span class="logo__word">VALMOND</span>
+        <a href="#top" class="logo logo--light" aria-label="Valmond — bosh sahifa" data-i18n-attr="aria-label:logo.aria">
+          <svg class="logo__img" viewBox="0 0 295 35" aria-hidden="true"><use href="#valmond-logo"/></svg>
         </a>
-        <p>Ta’mning oliy darajasi.</p>
+        <p data-i18n="foot.tagline">Ta’mning oliy darajasi.</p>
       </div>
       <div class="footer__col">
-        <h4>Aloqa</h4>
+        <h4 data-i18n="foot.contact">Aloqa</h4>
         <a href="tel:+998000000000">+998 00 000 00 00</a>
         <a href="mailto:hello@valmond.uz">hello@valmond.uz</a>
       </div>
       <div class="footer__col">
-        <h4>Ijtimoiy tarmoqlar</h4>
+        <h4 data-i18n="foot.social">Ijtimoiy tarmoqlar</h4>
         <a href="#" rel="noopener">Instagram</a>
         <a href="#" rel="noopener">Telegram</a>
       </div>
       <div class="footer__col">
-        <h4>Sahifalar</h4>
-        <a href="#kolleksiya">Kolleksiya</a>
-        <a href="#buyurtma">Buyurtma</a>
+        <h4 data-i18n="foot.pages">Sahifalar</h4>
+        <a href="#kolleksiya" data-i18n="foot.collection">Kolleksiya</a>
+        <a href="#buyurtma" data-i18n="foot.order">Buyurtma</a>
       </div>
     </div>
     <div class="container footer__bottom">
-      <span>© <span id="year">2026</span> Valmond. Barcha huquqlar himoyalangan.</span>
-      <span>Toshkent, O‘zbekiston</span>
+      <span>© <span id="year">2026</span> Valmond. <span data-i18n="foot.rights">Barcha huquqlar himoyalangan.</span></span>
+      <span data-i18n="foot.city">Toshkent, O‘zbekiston</span>
     </div>
   </footer>
 
@@ -483,11 +477,12 @@
     <div class="modal__card">
       <div class="modal__seal" aria-hidden="true">V</div>
       <h3 id="modalTitle">Rahmat, <span id="modalName"></span>!</h3>
-      <p>Arizangiz qabul qilindi. Shaxsiy menejeringiz tez orada <b id="modalPhone"></b> raqamiga qo‘ng‘iroq qiladi.</p>
-      <button class="btn btn--gold" data-close>Yaxshi</button>
+      <p id="modalText">Arizangiz qabul qilindi. Shaxsiy menejeringiz tez orada <b id="modalPhone"></b> raqamiga qo‘ng‘iroq qiladi.</p>
+      <button class="btn btn--gold" data-close data-i18n="modal.ok">Yaxshi</button>
     </div>
   </div>
 
-  <script src="js/main.js?v=3"></script>
+  <script src="js/i18n.js?v=1"></script>
+  <script src="js/main.js?v=6"></script>
 </body>
 </html>

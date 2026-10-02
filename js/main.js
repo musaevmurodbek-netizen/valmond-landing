@@ -15,6 +15,29 @@ const CONFIG = {
 
 document.documentElement.classList.remove('no-js');
 
+/* ---------- Til almashtirgich (tarjimalar: js/i18n.js) ---------- */
+const langWrap = document.getElementById('lang');
+const langBtn = document.getElementById('langBtn');
+const langMenu = document.getElementById('langMenu');
+
+const setLangMenu = (open) => {
+  langMenu.hidden = !open;
+  langBtn.setAttribute('aria-expanded', String(open));
+};
+
+langBtn.addEventListener('click', () => setLangMenu(langMenu.hidden));
+langMenu.addEventListener('click', (e) => {
+  const item = e.target.closest('[data-lang]');
+  if (!item) return;
+  setLang(item.dataset.lang);
+  setLangMenu(false);
+  langBtn.focus();
+});
+document.addEventListener('click', (e) => { if (!langWrap.contains(e.target)) setLangMenu(false); });
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && !langMenu.hidden) { setLangMenu(false); langBtn.focus(); }
+});
+
 /* ---------- Theme toggle (yorug' / qorong'u) ---------- */
 const THEME_KEY = 'valmond-theme';
 const themeToggle = document.getElementById('themeToggle');
@@ -33,9 +56,9 @@ const applyTheme = (theme, animate) => {
   }
   root.setAttribute('data-theme', theme);
   const dark = theme === 'dark';
-  themeToggle.setAttribute('aria-label', dark ? 'Yorug‘ rejimga o‘tish' : 'Qorong‘u rejimga o‘tish');
+  themeToggle.setAttribute('aria-label', t(dark ? 'theme.toLight' : 'theme.toDark'));
   themeToggle.setAttribute('aria-pressed', String(dark));
-  themeMeta.setAttribute('content', dark ? '#16130D' : '#F6F0E2');
+  themeMeta.setAttribute('content', dark ? '#16130D' : '#F8F3E4');
 };
 
 applyTheme(document.documentElement.getAttribute('data-theme') || 'light', false);
@@ -63,7 +86,7 @@ const nav = document.getElementById('nav');
 
 const setMenu = (open) => {
   burger.setAttribute('aria-expanded', String(open));
-  burger.setAttribute('aria-label', open ? 'Menyuni yopish' : 'Menyuni ochish');
+  burger.setAttribute('aria-label', t(open ? 'menu.close' : 'menu.open'));
   nav.classList.toggle('is-open', open);
   header.classList.toggle('menu-open', open);
   document.body.style.overflow = open ? 'hidden' : '';
@@ -141,8 +164,9 @@ const updateQty = (value) => {
   qtyInput.value = q;
   document.getElementById('qtyTotal').textContent = q * CONFIG.packsPerBox;
   const grams = q * CONFIG.boxWeightGrams;
-  document.getElementById('qtyWeight').textContent =
-    grams >= 1000 ? `${(grams / 1000).toLocaleString('uz-UZ', { maximumFractionDigits: 1 })} kg` : `${grams} g`;
+  document.getElementById('qtyWeight').textContent = grams >= 1000
+    ? `${(grams / 1000).toLocaleString(I18N_LOCALES[currentLang], { maximumFractionDigits: 1 })} ${t('unit.kg')}`
+    : `${grams} ${t('unit.g')}`;
 };
 form.querySelectorAll('.qty__btn').forEach((btn) => {
   btn.addEventListener('click', () => updateQty(Number(qtyInput.value) + Number(btn.dataset.step)));
@@ -226,7 +250,7 @@ form.addEventListener('submit', async (e) => {
   };
 
   submitBtn.classList.add('is-loading');
-  submitBtn.querySelector('.btn__label').textContent = 'Yuborilmoqda';
+  submitBtn.querySelector('.btn__label').textContent = t('form.sending');
 
   try {
     await sendOrder(order);
@@ -236,10 +260,10 @@ form.addEventListener('submit', async (e) => {
     updateQty(1);
   } catch (err) {
     console.error(err);
-    alert('Kechirasiz, arizani yuborishda xatolik yuz berdi. Iltimos, qayta urinib ko‘ring yoki bizga qo‘ng‘iroq qiling.');
+    alert(t('form.error'));
   } finally {
     submitBtn.classList.remove('is-loading');
-    submitBtn.querySelector('.btn__label').textContent = 'Arizani yuborish';
+    submitBtn.querySelector('.btn__label').textContent = t('form.submit');
   }
 });
 
@@ -247,10 +271,19 @@ form.addEventListener('submit', async (e) => {
 const modal = document.getElementById('modal');
 let lastFocus = null;
 
+let modalOrder = null;
+
+// Matn ochiq turgan modalda til almashsa ham yangilanadi
+function renderModal() {
+  if (!modalOrder) return;
+  document.getElementById('modalTitle').textContent = t('modal.title', { name: modalOrder.name.split(' ')[0] });
+  document.getElementById('modalText').innerHTML = t('modal.text', { phone: escapeHtml(modalOrder.phone) });
+}
+
 function openModal(order) {
   lastFocus = document.activeElement;
-  document.getElementById('modalName').textContent = order.name.split(' ')[0];
-  document.getElementById('modalPhone').textContent = order.phone;
+  modalOrder = order;
+  renderModal();
   modal.hidden = false;
   document.body.style.overflow = 'hidden';
   modal.querySelector('.btn').focus();
@@ -258,6 +291,7 @@ function openModal(order) {
 
 function closeModal() {
   modal.hidden = true;
+  modalOrder = null;
   document.body.style.overflow = '';
   if (lastFocus) lastFocus.focus();
 }
@@ -267,3 +301,17 @@ document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !modal.h
 
 /* ---------- Footer year ---------- */
 document.getElementById('year').textContent = new Date().getFullYear();
+
+/* ---------- Til o'zgarganda dinamik matnlarni yangilash ---------- */
+document.addEventListener('langchange', (e) => {
+  const lang = e.detail.lang;
+  document.getElementById('langCurrent').textContent = lang.toUpperCase();
+  langMenu.querySelectorAll('[data-lang]').forEach((b) => b.setAttribute('aria-checked', String(b.dataset.lang === lang)));
+  applyTheme(document.documentElement.getAttribute('data-theme') || 'light', false);
+  setMenu(burger.getAttribute('aria-expanded') === 'true');
+  updateQty(Number(qtyInput.value));
+  renderModal();
+  if (!submitBtn.classList.contains('is-loading')) submitBtn.querySelector('.btn__label').textContent = t('form.submit');
+});
+
+applyLang(initialLang());
